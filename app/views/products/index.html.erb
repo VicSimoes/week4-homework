@@ -6,7 +6,9 @@
 <% @product_list.each do |product| %>
 <div class="row">
   <div class="col-md-12">
-    <h3><a href="/products/show"><%= product %></a></h3>
+   <!-- <<h3><a href="/products/show"><%= product %></a></h3> -->
+   <%=link_to product_path %>
+
   </div>
 </div>
 <% end %>

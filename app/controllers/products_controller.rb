@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
 
   def index
-    @product_list = ["Helicopter Toy", "Harry Potter", "iPhone", "Sofa", "Coffee Mug"]
+    @product_list = Product.all
   end
 
   def show
-    @product = "iPhone"
+    @product = Product.find(params[:id])
   end
 
 end

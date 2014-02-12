@@ -1,15 +1,25 @@
 Week4Homework::Application.routes.draw do
 
+  root to: "products#index"
+
   get "/weather/search" =>"weather#search"
   get "/weather/conditions" => "weather#conditions"
 
+  controller 'products' do
+  get 'products/:id', action: 'show'
+
+  end
 end
+    #
+
+#  get "products/show" => "products#show"
+ # get "products/index" => "products#index"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -58,4 +68,4 @@ end
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+
