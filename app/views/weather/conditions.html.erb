@@ -1,5 +1,13 @@
 <h1>Current Conditions for <%= @city %></h1>
 
 <p>Current Temperature = <%=@data ["main"]["temp"].round %> degrees F</p>
-<p>Raw JSON response:</p>
+<p>Current Humidity = <%=@data ["main"]["humidity"]%></p>
+<p>Current Wind Gust = <%=@data ["wind"]["speed"]%> mph</p>
+<!--<p>Raw JSON response:</p>
 <p><%= @json_data %></p>
+
+<p>Raw JSON response:</p>
+<p><%= @data %></p>-->
+<!-- <p><%= @data.keys %></p> -->
+<!-- <p><%= @data["main"].keys %></p> -->
+<!-- <p><%= @data["wind"].keys %></p> -->

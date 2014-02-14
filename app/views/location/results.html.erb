@@ -1,0 +1,7 @@
+
+<p>Number of Steps: <%= @data.count %></p>
+ <ul>
+  <%= @data.each do |step| %>
+  <li><%= step["html_instructions"].html_safe %></li>
+  <% end %>
+</ul>

@@ -1,16 +1,21 @@
 Week4Homework::Application.routes.draw do
 
-  root to: "products#index"
+  #root to: "products#index"
 
-  get "/weather/search" =>"weather#search"
-  get "/weather/conditions" => "weather#conditions"
+    get "/weather/search" =>"weather#search"
+    get "/weather/conditions" => "weather#conditions"
 
-  controller 'products' do
-  get 'products/:id', action: 'show'
+    get "/products/index" => "products#index"
+    get "/products/:product_id/show" => "products#show"
 
-  end
+    get "/location/search" => "location#search"
+    get "/location/results" => "location#results"
 end
-    #
+
+ # resources :products do
+#    get :index
+#    get :show
+ # end
 
 #  get "products/show" => "products#show"
  # get "products/index" => "products#index"
